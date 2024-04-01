@@ -1,0 +1,26 @@
+﻿<Window x:Class="MandelbrotFractal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Mandelbrot Fractal" Width="800" Height="600"
+        MouseWheel="MainWindow_MouseWheel"
+        PreviewKeyDown="MainWindow_PreviewKeyDown"
+        Focusable="True">
+    <Grid>
+        <Image x:Name="image"  />
+        <Canvas x:Name="canvas"/>
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10">
+            <RadioButton Content="Mandelbrot" Tag="Mandelbrot" IsChecked="True" GroupName="FractalType" Checked="RadioButton_Checked"/>
+            <RadioButton Content="Sierpinski Triangle" Tag="SierpinskiTriangle" GroupName="FractalType" Checked="RadioButton_Checked"/>
+            <RadioButton Content="Sierpinski Carpet" Tag="SierpinskiCarpet" GroupName="FractalType" Checked="RadioButton_Checked"/>
+            <RadioButton Content="Color Theme 1" Tag="Theme1" GroupName="ColorTheme" Checked="RadioButton_Checked"/>
+            <RadioButton Content="Color Theme 2" Tag="Theme2" GroupName="ColorTheme" Checked="RadioButton_Checked"/>
+            <RadioButton Content="Color Theme 3" Tag="Theme3" GroupName="ColorTheme" Checked="RadioButton_Checked"/>
+            <TextBlock Text="Max Iterations:" Margin="0,10,0,5"/>
+            <TextBox x:Name="MaxIterationsTextBox" Text="1000" Width="100"/>
+            <Button Content="Change" Click="Change_Click" Margin="0,10,0,0"/>
+            <Button Content="Save" Click="SaveButton_Click" Margin="0,10,0,0"/>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
